@@ -63,16 +63,36 @@ This project is licensed under the MIT License.
 
 This project is configured for easy deployment to GitHub Pages:
 
-1. **Fork or push this repository to your GitHub account**
+### Set Up Repository
 
-2. **Enable GitHub Pages**:
-   - Go to your repository settings
-   - Navigate to the "Pages" section
-   - Under "Source", select "GitHub Actions"
+1. **Create a new GitHub repository**:
+   - Go to [GitHub](https://github.com/new) and create a new repository named "abaudio"
+   - Make it public for GitHub Pages to work with the free plan
 
-3. **Trigger the deployment**:
-   - The deployment will automatically start when you push to the main branch
-   - You can also manually trigger it from the Actions tab by selecting the "Deploy to GitHub Pages" workflow
+2. **Push your code to the repository**:
+   ```bash
+   # Add your GitHub repository as remote origin (replace USERNAME with your GitHub username)
+   git remote add origin https://github.com/USERNAME/abaudio.git
+   
+   # Push your code to GitHub
+   git push -u origin main
+   ```
 
-4. **Access your deployed application**:
-   - Once deployed, your application will be available at `https://[your-username].github.io/abaudio/`
+### Enable GitHub Pages
+
+1. **Configure GitHub Pages in repository settings**:
+   - Go to your repository on GitHub
+   - Click on "Settings" > "Pages" in the left sidebar
+   - Under "Build and deployment", select "GitHub Actions" as the source
+
+2. **The first deployment will start automatically**:
+   - Go to the "Actions" tab to see the deployment workflow in progress
+   - Wait for it to complete (this may take a few minutes)
+
+3. **Access your deployed application**:
+   - Once deployed, your app will be available at: 
+   - `https://USERNAME.github.io/abaudio/` (replace USERNAME with your GitHub username)
+
+### Updating Your Deployed App
+
+Whenever you push changes to the main branch, GitHub Actions will automatically rebuild and redeploy your application.

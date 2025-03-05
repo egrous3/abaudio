@@ -1,13 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  // If deploying to a custom domain, you can remove the basePath
-  // If deploying to a GitHub user/org page, set basePath to ''
-  // If deploying to a project page, set it to your repo name: '/abaudio'
-  basePath: '/abaudio',
+  // Only apply basePath in production build, not during development
+  basePath: process.env.NODE_ENV === 'production' ? '/abaudio' : '',
   images: {
     unoptimized: true,
   },
+  // This is needed to make GitHub Pages work with client-side routing
+  trailingSlash: true,
 };
 
 export default nextConfig;
