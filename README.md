@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ABaudio
+
+A web application for conducting A/B testing with audio files.
+
+## Features
+
+- Upload two audio files for comparison
+- Play both audio files with synchronized playback position
+- Easily switch between Audio A and Audio B while maintaining the playback position
+- Select your preferred audio file
+- Simple and intuitive user interface
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18.0.0 or higher
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd abaudio
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## How to Use
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Upload Audio Files**: Click on the upload areas to select two different audio files (Audio A and Audio B).
+2. **Play/Pause**: Use the play/pause button to control playback.
+3. **Switch Between Files**: Click "Listen to A" or "Listen to B" to switch between the two audio files while maintaining the playback position.
+4. **Make Your Selection**: After listening to both files, click either "Prefer A" or "Prefer B" to indicate your preference.
 
-## Learn More
+## Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is licensed under the MIT License.
 
-## Deploy on Vercel
+## Deployment on GitHub Pages
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is configured for easy deployment to GitHub Pages:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Fork or push this repository to your GitHub account**
+
+2. **Enable GitHub Pages**:
+   - Go to your repository settings
+   - Navigate to the "Pages" section
+   - Under "Source", select "GitHub Actions"
+
+3. **Trigger the deployment**:
+   - The deployment will automatically start when you push to the main branch
+   - You can also manually trigger it from the Actions tab by selecting the "Deploy to GitHub Pages" workflow
+
+4. **Access your deployed application**:
+   - Once deployed, your application will be available at `https://[your-username].github.io/abaudio/`
